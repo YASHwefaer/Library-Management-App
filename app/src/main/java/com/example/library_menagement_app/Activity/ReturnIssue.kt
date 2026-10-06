@@ -86,8 +86,7 @@ class ReturnBookActivity : AppCompatActivity() {
 
         lifecycleScope.launch(Dispatchers.IO) {
 
-            val returnBooks =
-                returnBookDao.getAllReturnBooks(userId)
+            val returnBooks = returnBookDao.getAllReturnBooks(userId)
 
             runOnUiThread {
 
@@ -138,11 +137,7 @@ class ReturnBookActivity : AppCompatActivity() {
 
         if (searchList.isEmpty()) {
 
-            Toast.makeText(
-                this,
-                "No return record found",
-                Toast.LENGTH_SHORT
-            ).show()
+            Toast.makeText(this, "No return record found", Toast.LENGTH_SHORT).show()
         }
     }
 
